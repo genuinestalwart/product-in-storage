@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta data -->
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product in Storage</title>
+
+    <!-- CSS and JS -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <header class="flex h-24 items-end justify-center"><h1 class="font-bold text-4xl text-emerald-400">Product in Storage</h1></header>
+
+    <main class="md:divide-x-2 divide-slate-400 md:flex my-10">
+        <section class="items-center flex flex-col md:pt-5 md:w-2/5" id="input-container">
+            <input class="bg-slate-200 outline-slate-400 block md:w-3/4 my-4 p-2 rounded-md w-4/5" type="text" placeholder="product name" id="input-product">
+
+            <input class="bg-slate-200 outline-slate-400 block md:w-3/4 my-4 p-2 rounded-md w-4/5" type="number" placeholder="product price" id="input-price">
+
+            <button class="bg-emerald-400 block font-semibold my-6 p-2 active:ring ring-emerald-500 rounded-md text-blue-600 w-1/2" type="button" id="add-to-storage">Add to storage</button>
+        </section>
+
+        <section class="md:px-12 px-8 md:overflow-y-auto md:w-3/5">
+            <h2 class="font-medium my-6 text-xl">Products added to the <span class="text-blue-600">Local Storage</span> are:</h2>
+
+            <table class="border border-solid border-slate-400 border-collapse my-6 table-fixed w-full">
+                <thead>
+                    <tr>
+                        <th class="bg-slate-300 border border-solid border-slate-400 p-2">Product</th>
+                        <th class="bg-slate-300 border border-solid border-slate-400 p-2">Price</th>
+                    </tr>
+                </thead>
+
+                <tbody id="product-container">
+                    <!-- <tr>
+                        <td class="bg-slate-100 border border-solid border-slate-400 p-2">A</td>
+                        <td class="bg-slate-100 border border-solid border-slate-400 p-2">A</td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html>
